@@ -45,7 +45,7 @@ inquirer.prompt(questions).then(answers => {
     for (var i=0; i<tilesW; i++) {  // for (var i=0; i<tilesW; i++) {
       for (var j=0; j<tilesH; j++) {  // for (var j=0; j<tilesH; j++) {
         //console.log('Tile [' + j + ', ' + i + ']');
-        var tilePixels = new Array(tileSize).fill(0).map(() => new Array(tileSize).fill(0));
+        var tilePixels = new Array(tileSize).fill('').map(() => new Array(tileSize).fill(''));
         for (var k=0; k<tileSize; k++) {
           for (var l=0; l<tileSize; l++) {
             var currY = k + (tileSize * j);
