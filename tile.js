@@ -81,6 +81,7 @@ inquirer.prompt(questions).then(answers => {
                 }
               }
             }
+            if (isSame) break;
           }
           if (!isSame) {
             //console.log('\x1b[42m%s\x1b[0m','Add curent tile to tilesArray.');
@@ -96,8 +97,8 @@ inquirer.prompt(questions).then(answers => {
     console.log('New image has ' + tilesArray.length + ' tiles.');
     //console.log(tilesArray[0]);
 
-    var imgW = tilesArray.length * 16;
-    let newImg = new Jimp(imgW, 16, function (err, newImg) {
+    var imgW = tilesArray.length * tileSize;
+    let newImg = new Jimp(imgW, tileSize, function (err, newImg) {
       if (err) throw err;
 
       //console.log(tilesArray[0][0][0]);
