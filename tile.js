@@ -73,6 +73,7 @@ inquirer.prompt(questions).then(answers => {
           for (var m=0; m<tilesArray.length; m++) {
             //console.log('Comparing tile #' + tileNum + ' with tile #' + m + '...');
             isSame = true;
+
             for (var n=0; n<tileSize; n++) {
               for (var o=0; o<tileSize; o++) {
                 if (tilesArray[m][n][o] !=  tilePixels[n][o]) {
