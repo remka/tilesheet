@@ -101,17 +101,19 @@ inquirer.prompt(questions).then(answers => {
       console.log('New image has ' + tilesArray.length + ' tiles. Thats a ' + reduc + ' tiles reduction.');
 
       var squareSize = Math.ceil(Math.sqrt(tilesArray.length));
-      console.log('Building a ' + squareSize + 'x' + squareSize + ' grid.');
+      //console.log('Building a ' + squareSize + 'x' + squareSize + ' grid.');
 
       var imgW = squareSize * tileSize;
       var row = 0;
       var col = 0;
+      var maxY = 0;
 
       let newImg = new Jimp(imgW, imgW, function (err, newImg) {
         if (err) throw err;
         for (var i = 0; i<tilesArray.length; i++) {
           var xS = col * tileSize;
           var yS = row * tileSize;
+          maxY = yS + tileSize;
           for (var j=0; j<tileSize; j++) {
             for (var k=0; k<tileSize; k++) {
               var currColor = tilesArray[i][j][k];
@@ -127,7 +129,9 @@ inquirer.prompt(questions).then(answers => {
             col += 1;
           }
         }
+        // console.log('lowest point:' + maxY);
         newName = makeNewName(imagePath, extension);
+        newImg.crop(0, 0, imgW, maxY);
         newImg.write('sprites/' + newName, (err) => {
           if (err) throw err;
         });
