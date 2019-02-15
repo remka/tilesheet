@@ -15,4 +15,4 @@ A prompt asks you the size of your tiles. Type the size in px (just the number),
 
 The script will create another image in the same folder, identical *minus* duplicated tiles.
 
-The level.png image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) ans used only for illustration purpose.  
+The `level.png` image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) ans used only for illustration purpose.  
