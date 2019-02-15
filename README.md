@@ -27,7 +27,7 @@ You can test the script with `node tile image.png` and `node tile level.png`.
 
 A prompt will ask you the size of your tiles. Type the size in pixels (just type the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
-The script will create a `<filename>-tile.png` in the `sprites` folder, removing all duplicated tiles from the original image. The script also creates an optimized (ie. lighter) version of the file in the `sprites/optimized` folder.  
+The script will create a `<filename>-tile.png` in the `sprites` folder, removing all duplicated tiles from the original image. The script also creates an optimized (ie. lighter) version of the same file in the `sprites/optimized` folder (this is the version I recommend using if size is an issue).   
 
 ## Limitations  
 
