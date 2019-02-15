@@ -31,15 +31,11 @@ The script will create a `<filename>-tile.png` in the `sprites` folder, removing
 
 ## Limitations  
 
-Added pngcrush (two more dependencies), so the processed images are now *way* smaller than the originals. The optimized files are created in the `optimized` folder.
-
-~~The script works well when there are many redundant tiles on fairly big maps (*big* when working with pixel art... this has not been tested with giant HD maps, and will probably crash your computer). After a bit of testing, I also realized that when working with fairly complex maps, with not many redundant tiles, the savings in term of file size becomes negligible, and you probably could just use the original image as a tile sheet without much of a difference.~~  
-
 Tested only with PNGs, on a Mac, with version v8.9.2 of Node.  
 
 ## TODO
 
-- [x] Export tile sheet as a square-ish shape for better usability   
+- [x] Export tile sheet as a square-ish shape for easier use in map editor     
 - [ ] Allow user to chose between square-ish and strip shapes for export  
 - [ ] Support non-square tiles    
 
