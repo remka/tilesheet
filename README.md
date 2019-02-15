@@ -11,7 +11,7 @@ Clone or download the repository.
 Open the Terminal, and `cd` to the repo folder, then install dependencies with `npm install`.  
 
 Call it with `node tile <path-to-image>`.  
-The test images should work with `node tile image.png` and `node tile level.png`.  
+You can test the script with `node tile image.png` and `node tile level.png`.  
 
 A prompt will ask you the size of your tiles. Type the size in px (just the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
