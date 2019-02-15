@@ -6,13 +6,19 @@ A simple script that takes an grid-based image and outputs an other image, getti
 
 ## How to use    
 
-Open the Terminal, and `cd` to the folder in which is the script (type `cd`, the just drop the folder that contains the script).  
-Install dependencies with `npm install`.  
+Clone or download the repository.  
 
-Call it with `node tile <path-to-image>`. The test image should work with `node tile image.png`.  
+Open the Terminal, and `cd` to the repo folder, then install dependencies with `npm install`.  
 
-A prompt asks you the size of your tiles. Type the size in px (just the number), or leave it blank to use the default valu (16px, but easy to change by editing the script). The script only supports quare tiles for now.  
+Call it with `node tile <path-to-image>`.  
+The test images should work with `node tile image.png` and `node tile level.png`.  
+
+A prompt will ask you the size of your tiles. Type the size in px (just the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
 The script will create another image in the same folder, identical *minus* duplicated tiles.
 
 The `level.png` image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) and used only for illustration purpose.  
+
+## Limitations / TODO
+
+* Only supports square tiles for now  
