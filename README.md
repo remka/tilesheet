@@ -1,4 +1,4 @@
-# Tilesheet utility
+# Tilesheet Maker  
 
 A simple script that takes a grid-based image as a parameter and creates a tile sheet, getting rid of all duplicated tiles.  
 
