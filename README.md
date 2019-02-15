@@ -1,10 +1,12 @@
 # Tilesheet utility
 
-A simple script that takes an grid-based image and outputs an other image, getting rid of of duplicated tiles.  
+A simple script that takes a grid-based image as a parameter and creates a tile sheet, getting rid of all duplicated tiles.  
 
 ![Image of tilesheet](https://i.imgur.com/lfqLQy8.png)
 
 ## How to use    
+
+If you don't have it already, install [Node.js](https://nodejs.org/en/).  
 
 Clone or download the repository.  
 
