@@ -29,7 +29,11 @@ A prompt will ask you the size of your tiles. Type the size in pixels (just type
 
 The script will create a `<filename>-tile.png` in the `sprites` folder, *hopefully* removing all duplicated tiles from the original image.
 
-## Limitations / TODO
+## Limitations  
+
+The script works well when there are many redundant tiles on fairly big maps (*big* when working with pixel art... this has not been tested with giant HD maps, and will probably crash your computer). After a bit of testing, I also realized that when working with fairly complex maps, with not many redundant tiles, the savings in term of file size becomes negligible, and you probably could just use the original image as a tile sheet without much of a difference.  
+
+## TODO
 
 - [x] Export tile sheet as a square-ish shape for better usability   
 - [ ] Allow user to chose between square-ish and strip shapes for export  
