@@ -16,7 +16,8 @@ inquirer.prompt(questions).then(answers => {
       tilesH,
       tilesW,
       numTiles,
-      newName;
+      newName,
+      extension;
 
   var tileNum = 0;
   var tilesArray = [];
@@ -31,14 +32,11 @@ inquirer.prompt(questions).then(answers => {
     tileSize = parseInt(answers['tileSize']);
   }
 
-  // name of new file
-  newName = new Date();
-  newName += '-tile.png';
-
   //console.log(`Working with image: ${imagePath} and a ${tileSize}x${tileSize} grid.`);
 
   Jimp.read(imagePath, (err, image) => {
     if (err) throw err;
+    extension = image.getExtension();
     iHeight = image.bitmap.height;
     iWidth = image.bitmap.width;
     tilesH = iHeight / tileSize;
@@ -104,9 +102,10 @@ inquirer.prompt(questions).then(answers => {
             }
           }
         }
-        var newName = imagePath.split('.');
-        newName = newName[0] + '-tile.png';
-        newImg.write(newName, (err) => {
+        // name of new file
+        newName = new Date().getTime();
+        newName += '-tile.' + extension;
+        newImg.write('sprites/' + newName, (err) => {
           if (err) throw err;
         });
       });
