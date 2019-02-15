@@ -103,7 +103,11 @@ inquirer.prompt(questions).then(answers => {
           }
         }
         // name of new file
-        newName = new Date().getTime();
+        newName = imagePath.split('/'); // new Date().getTime();
+        var index = newName.length - 1;
+        newName = newName[index];
+        newName = newName.split('.');
+        newName = newName[0];
         newName += '-tile.' + extension;
         newImg.write('sprites/' + newName, (err) => {
           if (err) throw err;
