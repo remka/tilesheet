@@ -17,8 +17,12 @@ A prompt will ask you the size of your tiles. Type the size in px (just the numb
 
 The script will create another image in the same folder, identical *minus* duplicated tiles.
 
-The `level.png` image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) and used only for illustration purpose.  
-
 ## Limitations / TODO
 
 * Only supports square tiles for now  
+
+## Credits / Thanks  
+
+Thanks to [@blld](https://github.com/blldand-tiles) who helped me solve my *ghost tiles* issue. You rock bro!  
+
+The `level.png` image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) and used only for illustration purpose.  
