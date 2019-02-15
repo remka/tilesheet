@@ -4,6 +4,16 @@ A simple script that takes a grid-based image as a parameter and creates a tile 
 
 ![Image of tilesheet](https://i.imgur.com/lfqLQy8.png)
 
+## Why I made this?
+
+When creating tile-based games, many people work directly with tiles editors, like [Tiled](https://www.mapeditor.org/). I tend to work directly in Photoshop, copying and pasting tiles when they already exist, and creating new ones on the fly when needed.  
+I usually end up with a giant image file, with a lot of duplicate tiles. What I used to do was to painstakingly pick tiles one by one, and then add manually them to a sprite sheet.
+
+This was a fairly time-consuming process, and I wondered if I could automate it. There are a couple of very good options out there, like [TexturePacker](https://www.codeandweb.com/texturepacker), but this seemed overkill since what I needed was fairly simple.  
+
+I ended up coding it myself :) . This is certainly not the cleanest code, and it could definitely be optimized, but it does just what I need. Of course, you are welcome to use it if you have a similar workflow and you think it could be helpful.    
+
+
 ## How to use    
 
 If you don't have it already, install [Node.js](https://nodejs.org/en/).  
