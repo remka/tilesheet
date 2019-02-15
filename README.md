@@ -15,7 +15,7 @@ The test images should work with `node tile image.png` and `node tile level.png`
 
 A prompt will ask you the size of your tiles. Type the size in px (just the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
-The script will create another image in the same folder, identical *minus* duplicated tiles.
+The script will create a `<timestamp>-tile.png` in the same folder, removing all duplicated tiles from the original image.
 
 ## Limitations / TODO
 

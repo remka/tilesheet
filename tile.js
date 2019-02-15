@@ -32,8 +32,8 @@ inquirer.prompt(questions).then(answers => {
   }
 
   // name of new file
-  newName = imagePath.split('.');
-  newName = newName[0] + '-tile.png';
+  newName = new Date();
+  newName += '-tile.png';
 
   //console.log(`Working with image: ${imagePath} and a ${tileSize}x${tileSize} grid.`);
 
