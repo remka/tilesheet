@@ -110,20 +110,27 @@ inquirer.prompt(questions).then(answers => {
       let newImg = new Jimp(imgW, imgW, function (err, newImg) {
         if (err) throw err;
         for (var i = 0; i<tilesArray.length; i++) {
-          console.log('col: ' + col + ' | row:' + row);
+          var xS = col * tileSize;
+          var yS = row * tileSize;
           for (var j=0; j<tileSize; j++) {
             for (var k=0; k<tileSize; k++) {
               var currColor = tilesArray[i][j][k];
-              //var currColor = tilesArray[index][j][k];
+              var x = k + xS;
+              var y = j + yS;
+              newImg.setPixelColor(currColor, x, y);
             }
           }
-          if(col >= squareSize) {
+          if(col >= squareSize - 1) {
             col = 0;
             row += 1;
           } else {
             col += 1;
           }
         }
+        newName = makeNewName(imagePath, extension);
+        newImg.write('sprites/' + newName, (err) => {
+          if (err) throw err;
+        });
       });
 
       /*
