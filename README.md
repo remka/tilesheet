@@ -27,11 +27,11 @@ You can test the script with `node tile image.png` and `node tile level.png`.
 
 A prompt will ask you the size of your tiles. Type the size in pixels (just type the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
-The script will create a `<filename>-tile.png` in the `sprites` folder, *hopefully* removing all duplicated tiles from the original image.
+The script will create a `<filename>-tile.png` in the `sprites` folder, removing all duplicated tiles from the original image. The script also creates an optimized (ie. lighter) version of the file in the `sprites/optimized` folder.  
 
 ## Limitations  
 
-Added pngcrush (two more dependencies), so the processed images are now *way* smaller than the originals.  
+Added pngcrush (two more dependencies), so the processed images are now *way* smaller than the originals. The optimized files are created in the `optimized` folder.
 
 ~~The script works well when there are many redundant tiles on fairly big maps (*big* when working with pixel art... this has not been tested with giant HD maps, and will probably crash your computer). After a bit of testing, I also realized that when working with fairly complex maps, with not many redundant tiles, the savings in term of file size becomes negligible, and you probably could just use the original image as a tile sheet without much of a difference.~~  
 
