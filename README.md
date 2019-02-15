@@ -2,7 +2,7 @@
 
 A simple script that takes a grid-based image as a parameter and creates a tile sheet, getting rid of all duplicated tiles.  
 
-![Image of tilesheet](https://i.imgur.com/lfqLQy8.png)
+![Image of tilesheet](https://i.imgur.com/RvWxJAq.png)
 
 ## Why I made this?
 
