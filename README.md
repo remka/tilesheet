@@ -1,5 +1,3 @@
-⚠️ **This is a WIP, its *kind of working* but not perfect yet - Use at your own risks!** ⚠️        
-
 # Tilesheet utility
 
 A simple script that takes an grid-based image and outputs an other image, getting rid of of duplicated tiles.  
@@ -21,8 +19,9 @@ The script will create a `<filename>-tile.png` in the `sprites` folder, *hopeful
 
 ## Limitations / TODO
 
-* Only supports square tiles  
-* New image only created a single row for now (TODO: add square-ish image creation)  
+- [x] Export tile sheet as a square-ish shape  
+- [ ] Allow user to chose between square-ish export and strip export  
+- [ ] Support non-square tiles    
 
 ## Credits / Thanks  
 
