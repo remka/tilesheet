@@ -18,10 +18,7 @@ inquirer.prompt(questions).then(answers => {
       numTiles;
 
   var tileNum = 0;
-
-  var tilesArray = [],
-      newArray = [];
-
+  var tilesArray = [];
   var isSame = true;
 
   var imagePath = process.argv[2];
