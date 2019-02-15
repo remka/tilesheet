@@ -8,21 +8,21 @@ A simple script that takes a grid-based image as a parameter and creates a tile 
 
 If you don't have it already, install [Node.js](https://nodejs.org/en/).  
 
-Clone or download the repository.  
+Clone, using `git clone https://github.com/remka/tilesheet.git` or download the repository.  
 
-Open the Terminal, and `cd` to the repo folder, then install dependencies with `npm install`.  
+Open the Terminal, and `cd` to the repo folder, and install the dependencies with `npm install`.  
 
-Call it with `node tile <path-to-image>`.  
+Use the script with `node tile <path-to-image>`. It should work with both absolute and relative paths.  
 You can test the script with `node tile image.png` and `node tile level.png`.  
 
-A prompt will ask you the size of your tiles. Type the size in px (just the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
+A prompt will ask you the size of your tiles. Type the size in pixels (just type the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
 
 The script will create a `<filename>-tile.png` in the `sprites` folder, *hopefully* removing all duplicated tiles from the original image.
 
 ## Limitations / TODO
 
-- [x] Export tile sheet as a square-ish shape  
-- [ ] Allow user to chose between square-ish export and strip export  
+- [x] Export tile sheet as a square-ish shape for better usability   
+- [ ] Allow user to chose between square-ish and strip shapes for export  
 - [ ] Support non-square tiles    
 
 ## Credits / Thanks  
