@@ -1,4 +1,4 @@
-⚠️ **This is a WIP, it kindof working (thanks to @blld), but not perfect. I'm just storing it now while I'm working on it!**      
+⚠️ **This is a WIP, it kind of working but not perfect yet. I'm just storing it now while I'm working on it!**      
 
 # Tilesheet utility
 
@@ -19,7 +19,8 @@ The script will create another image in the same folder, identical *minus* dupli
 
 ## Limitations / TODO
 
-* Only supports square tiles for now  
+* Only supports square tiles  
+* New image only created a single row for now (TODO: add square-ish image creation)  
 
 ## Credits / Thanks  
 
