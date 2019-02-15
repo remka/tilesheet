@@ -1,4 +1,4 @@
-⚠️ **This is a WIP, its *kind of working* but not perfect yet. I'm storing it here while I'm still working on it - Use at your own risk!** ⚠️        
+⚠️ **This is a WIP, its *kind of working* but not perfect yet - Use at your own risks!** ⚠️        
 
 # Tilesheet utility
 
