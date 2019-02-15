@@ -5,7 +5,17 @@ var questions = [{
   type: 'input',
   name: 'tileSize',
   message: "Tile dimension? (default: 16)",
-}]
+}];
+
+function makeNewName(path, ext) {
+  var newName = path.split('/');
+  var index = newName.length - 1;
+  newName = newName[index];
+  newName = newName.split('.');
+  newName = newName[0];
+  newName += '-tile.' + ext;
+  return newName;
+};
 
 inquirer.prompt(questions).then(answers => {
 
@@ -86,9 +96,37 @@ inquirer.prompt(questions).then(answers => {
         }
       }
 
-      var pct = Math.floor((numTiles * 100)/tilesArray.length);
-      console.log('New image has ' + tilesArray.length + ' tiles.' + pct);
+      //var pct = Math.floor((numTiles * 100)/tilesArray.length);
+      var reduc = numTiles - tilesArray.length;
+      console.log('New image has ' + tilesArray.length + ' tiles. Thats a ' + reduc + ' tiles reduction.');
 
+      var squareSize = Math.ceil(Math.sqrt(tilesArray.length));
+      console.log('Building a ' + squareSize + 'x' + squareSize + ' grid.');
+
+      var imgW = squareSize * tileSize;
+      var row = 0;
+      var col = 0;
+
+      let newImg = new Jimp(imgW, imgW, function (err, newImg) {
+        if (err) throw err;
+        for (var i = 0; i<tilesArray.length; i++) {
+          console.log('col: ' + col + ' | row:' + row);
+          for (var j=0; j<tileSize; j++) {
+            for (var k=0; k<tileSize; k++) {
+              var currColor = tilesArray[i][j][k];
+              //var currColor = tilesArray[index][j][k];
+            }
+          }
+          if(col >= squareSize) {
+            col = 0;
+            row += 1;
+          } else {
+            col += 1;
+          }
+        }
+      });
+
+      /*
       var imgW = tilesArray.length * tileSize;
       let newImg = new Jimp(imgW, tileSize, function (err, newImg) {
         if (err) throw err;
@@ -102,17 +140,13 @@ inquirer.prompt(questions).then(answers => {
             }
           }
         }
-        // name of new file
-        newName = imagePath.split('/'); // new Date().getTime();
-        var index = newName.length - 1;
-        newName = newName[index];
-        newName = newName.split('.');
-        newName = newName[0];
-        newName += '-tile.' + extension;
+        newName = makeNewName(imagePath, extension);
         newImg.write('sprites/' + newName, (err) => {
           if (err) throw err;
         });
       });
+      */
+
     }
   });
 })
