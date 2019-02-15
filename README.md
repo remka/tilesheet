@@ -2,6 +2,8 @@
 
 # Tilesheet utility
 
+![Image of tilesheet](https://i.imgur.com/aYFzqlb.png)
+
 A simple script that takes an grid-based image and outputs an other image, getting rid of of duplicated tiles.  
 
 ## How to use    
