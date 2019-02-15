@@ -1,5 +1,7 @@
 const Jimp = require('jimp');
 const inquirer = require('inquirer');
+const imagemin = require('imagemin');
+const imageminPngcrush = require('imagemin-pngcrush');
 
 var questions = [{
   type: 'input',
@@ -134,6 +136,13 @@ inquirer.prompt(questions).then(answers => {
         newImg.crop(0, 0, imgW, maxY);
         newImg.write('sprites/' + newName, (err) => {
           if (err) throw err;
+          imagemin(['sprites/*.png'], 'sprites/optimized', {
+          	plugins: [
+          		imageminPngcrush()
+          	]
+          }).then(() => {
+          	console.log('Images optimized.');
+          });
         });
       });
 

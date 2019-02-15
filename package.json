@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Makes a spritesheet from a PNG.",
   "dependencies": {
+    "imagemin": "6.1.0",
+    "imagemin-pngcrush": "6.0.0",
     "inquirer": "6.2.2",
     "jimp": "0.6.0"
   }
