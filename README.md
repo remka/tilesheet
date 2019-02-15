@@ -20,9 +20,9 @@ If you don't have it already, install [Node.js](https://nodejs.org/en/).
 
 Clone, using `git clone https://github.com/remka/tilesheet.git` or download the repository.  
 
-Open the Terminal, and `cd` to the repo folder, and install the dependencies with `npm install`.  
+Open the Terminal, `cd` to the repo folder, and install the dependencies with `npm install` (on a Mac, you can just type `cd`, drop the folder in the Terminal and hit the Return key).  
 
-Use the script with `node tile <path-to-image>`. It should work with both absolute and relative paths.  
+Use the script by typing `node tile <path-to-image>`. It should work with both absolute and relative paths.  
 You can test the script with `node tile image.png` and `node tile level.png`.  
 
 A prompt will ask you the size of your tiles. Type the size in pixels (just type the number), or leave it blank to use the default value (16px). The script won't run if the dimensions of the image you provide is not divisible by the tile size.  
@@ -32,6 +32,8 @@ The script will create a `<filename>-tile.png` in the `sprites` folder, *hopeful
 ## Limitations  
 
 The script works well when there are many redundant tiles on fairly big maps (*big* when working with pixel art... this has not been tested with giant HD maps, and will probably crash your computer). After a bit of testing, I also realized that when working with fairly complex maps, with not many redundant tiles, the savings in term of file size becomes negligible, and you probably could just use the original image as a tile sheet without much of a difference.  
+
+Tested only with PNGs, on a Mac, with version v8.9.2 of Node.  
 
 ## TODO
 
