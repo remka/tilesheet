@@ -41,5 +41,5 @@ Tested only with PNGs, on a Mac, with version v8.9.2 of Node.
 
 ## Credits / Thanks  
 
-* Thanks to [@blld](https://github.com/blldand-tiles) who helped me solve my *ghost tiles* issue. You rock bro!    
+* Thanks to [@blld](https://github.com/blld) who helped me solve my *ghost tiles* issue. You rock bro!    
 * The `level.png` image was created by [Clint Bellanger](https://opengameart.org/forumtopic/feedback-on-16px-robots-and-tiles) and used only for illustration purpose.    
